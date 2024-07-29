@@ -1,11 +1,13 @@
-body{
+body {
     background-color: black;
     color: white;
 }
-#container{
+
+#container {
     margin-left: 15%;
 }
-#navbar{
+
+#navbar {
     display: flex;
     position: fixed;
     top: 0;
@@ -15,35 +17,54 @@ body{
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
     z-index: 999;
 }
-#navigate p.active {
-    color: #1ae90b;
-    font-weight: bold;
-}
-#navigate{
+
+#navigate {
     display: flex;
     gap: 14%;
     font-size: 18px;
     margin-top: 1%;
-    margin-left: 27%;
-    width: 50%;
+    margin-left: 10%;
+    width: 40%;
+    text-wrap: nowrap;
 }
-#landingpage{
+
+#navigate a {
+    color: white; /* Change link color to white */
+    text-decoration: none; 
+    font-size: 30px;
+    margin-left: -3%;
+}
+
+#navigate a.active {
+    color: #1ae90b; 
+    font-weight: bold;
+}
+
+#navigate a:hover {
+    text-decoration: underline; 
+}
+
+#landingpage {
     margin-top: 13%;
     display: flex;
     gap: 10%;
 }
-#logo{
+
+#logo {
     margin-left: -4%;
     height: 100%;
 }
-#resume{
-    width:90px;
+
+#resume-button {
+    list-style: none;
+    width: 90px;
     border-radius: 15%;
     background-color: #1ae90b;
     border-color: #1ae90b;
     color: white;
     height: 70px;
 }
+
 #Maureen {
     height: 350px;
     border-radius: 17%;
@@ -51,323 +72,490 @@ body{
     padding: 29px;
     box-sizing: border-box;
     position: relative;
-    z-index: 1;
 }
-#aboutHead{
+
+#aboutHead {
     margin-top: 7%;
     font-size: 25px;
     color: #1ae90b;
 }
-#about{
+
+#about {
     font-size: 30px;
     margin-left: 2%;
-    border-radius: 5px;
-    border: solid 5px;
     border-radius: 25px;
+    border: solid 5px #1ae90b;
     padding-left: 5%;
     padding-right: 6%;
     width: 75%;
     text-align: left;
-    border-color: #1ae90b;
 }
-#intro{
-font-size: 35px;
-margin-top: -2%;
+
+#intro {
+    font-size: 35px;
+    margin-top: -2%;
 }
-#skills{
+
+#skills {
     margin-left: 4%;
     gap: 2px;
 }
-#Row1{
-display: flex;
-gap: 6.5%;
+
+#Row1, #Row2, #Row3 {
+    display: flex;
+    gap: 6%;
 }
-#Product{
+
+#Product {
     margin-left: 6px;
     height: 90px;
     margin-top: 10px;
     margin-right: -40px;
 }
-#pmCourse{
+
+#pmCourse {
     margin-left: 29px;  
 }
-#Row2{
-display: flex;
-gap: 6%;
+
+#mobile {
+    margin-left: 6px;
+    height: 90px;
 }
-#Row3{
-display: flex;
-gap: 6%;
+
+#design {
+    margin-left: 6px;
+    height: 90px;
 }
-#serviceHead{
+
+#designCourse {
+    margin-left: -30px; 
+}
+
+#serviceHead {
     margin-top: 7%;
     font-size: 25px;
     color: #1ae90b;  
 }
-#image{
+#contacthead{
+    margin-top: 7%;
+    font-size: 25px;
+    margin-left: -26.5%;
+    color: #1ae90b;   
+}
+
+#image {
     height: 90px;
     margin-top: 17px;
     margin-right: -40px;
 }
-#contact{
-  margin-left: 20%; 
- 
+
+#contact {
+    margin-left: 20%; 
+}
+#contact a {
+    color: white; 
+    text-decoration: none;
 }
 
+#contact a:hover {
+    text-decoration: underline; 
+}
 
-/* For screens with a minimum width of 768px */
+/* For screens with a maximum width of 768px */
 @media only screen and (max-width: 768px) {
     #container {
         margin-left: 5%;
     }
+    
     #navbar {
-        display: flex;
-        position: fixed;
-        top: 0;
-        background-color: black;
         height: 50px;
-        width: 100%;         
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        z-index: 999;
+        font-size: 10px;
     }
+
     #navigate {
         margin-left: 8%;
         width: 50%;
-        font-size: 10px;
     }
-    #navigate p.active {
-        color: #1ae90b;
-        font-weight: bold;
-      }
+    #navigate a {
+        color: white; /* Change link color to white */
+        text-decoration: none; 
+        font-size: 10px;
+        margin-top: 4%;
+        margin-left:-4.5%;
+    }
+
     #landingpage {
         margin-top: 13%;
     }
+
     #logo {
-        margin-left: -4%;
         width: 110px;
         height: 50px;
     }
+
     #resume {
         width: 58px;
         height: 40px;
         font-size: 12px;
     }
+
     #Maureen {
         height: 110px;
-        border-radius: 17%;
         border: 4px solid #1ae90b;
         padding: 7px;
-        box-sizing: border-box;
-        position: relative;
-        z-index: 5;
         margin-top: 2%;
     }
+
     #aboutHead {
-        margin-top: 7%;
         font-size: 12px;
     }
+
     #about {
-        margin-left: 2%;
         width: 80%;    
         font-size: 14.5px;
-        margin-left: 2%;
         border-radius: 10px;
-        border: solid 5px;
-        border-color: #1ae90b;
     }
+
     #intro {
-        margin-top: 1%;
         font-size: 12px;
+    }
 
-    }
-    #skills {
-        margin-left: 4%;
-    }
-    #Row1 {
+    #Row1, #Row2, #Row3 {
         gap: 15%;
-        display: flex;
         flex-wrap: wrap;
-        font-size: 10px;
+        font-size: 9px;
     }
+
     #Product {
-        margin-left: 1px;
-        margin-top: 10px;
-        margin-right: -40px;
-        width: 30%;
+        width: 35%;
         height: 70px;
+        margin-left: -2px;
     }
     #pmCourse {
-        margin-left: -70px;
+        position: relative;
+        right: 22%;
     }
-    #webCourse {
-        margin-left: -30px;
-    }
-    #pmCourse {
-        margin-left: 20px;
-    }
-    #Row2 {
-        gap: 15%;
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 10.5px;
 
-    }
-    #mobileCourse{
-        margin-left: -30px;
+    #design{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: -10%;  
     }
     #designCourse{
-        margin-left: -30px; 
+        position: relative;
+        right: 20%;
+       bottom: 45px;  
     }
-    #Row3 {
-        gap: 6%;
-        display: flex;
-        flex-wrap: wrap;
-        font-size: 10px;
+    #mobile{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: 4%;  
+    }
+    #mobileCourse{
+        position: relative;
+        right: -20%;
+       bottom: 65px;
+    }
+    #backend{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: -7%;  
+    }
+    #backendCourse{
+        position: relative;
+        right: -20%;
+       bottom: 80px;  
+    }
+    #research{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: -15%;  
+    }
+    #researchCourse{
+        position: relative;
+        right: 30%;
+       bottom: 60px;  
     }
     #serviceHead {
-        margin-top: 7%;
         font-size: 12px;
     }
+
     #image {
-        margin-top: 7px;
-        margin-right: -40px;
-        width: 170%;
-        height: 60px;
+        width: 200%;
+        height: 58px;
     }
+
     #contact {
-        margin-left: 20%;
         font-size: 10px;
     }
 }
 
 /* For screens with a minimum width of 1024px */
-@media only screen and (min-width: 1024px) {
+@media only screen and (min-width: 768px) and (max-width: 1024) {
     #container {
-        margin-left: 15%;
+        margin-left: 5%;
     }
+    
     #navbar {
-        width: 100%;
+        height: 50px;
+        font-size: 10px;
     }
+
     #navigate {
-        margin-left: 27%;
+        margin-left: 8%;
         width: 50%;
     }
+    #navigate a {
+        color: white; /* Change link color to white */
+        text-decoration: none; 
+        font-size: 10px;
+        margin-top: 4%;
+        margin-left:-4.5%;
+    }
+
     #landingpage {
         margin-top: 13%;
     }
+
     #logo {
-        margin-left: -4%;
+        width: 110px;
+        height: 50px;
     }
+
     #resume {
-        width: 90px;
+        width: 58px;
+        height: 40px;
+        font-size: 12px;
     }
+
     #Maureen {
-        height: 350px;
+        height: 110px;
+        border: 4px solid #1ae90b;
+        padding: 7px;
+        margin-top: 2%;
     }
+
     #aboutHead {
-        margin-top: 7%;
+        font-size: 12px;
     }
+
     #about {
-        margin-left: 2%;
-        width: 75%;
+        width: 80%;    
+        font-size: 14.5px;
+        border-radius: 10px;
     }
+
     #intro {
-        margin-top: -2%;
+        font-size: 12px;
     }
-    #skills {
-        margin-left: 4%;
+
+    #Row1, #Row2, #Row3 {
+        gap: 15%;
+        flex-wrap: wrap;
+        font-size: 9px;
     }
-    #Row1 {
-        gap: 6.5%;
-    }
+
     #Product {
-        margin-left: 6px;
-        margin-top: 10px;
-        margin-right: -40px;
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
     }
     #pmCourse {
-        margin-left: 29px;
+        position: relative;
+        right: 22%;
     }
-    #Row2 {
-        gap: 6%;
+
+    #design{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: -10%;  
     }
-    #Row3 {
-        gap: 6%;
+    #designCourse{
+        position: relative;
+        right: 20%;
+       bottom: 45px;  
+    }
+    #mobile{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: 4%;  
+    }
+    #mobileCourse{
+        position: relative;
+        right: -20%;
+       bottom: 65px;
+    }
+    #backend{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: -7%;  
+    }
+    #backendCourse{
+        position: relative;
+        right: -20%;
+       bottom: 80px;  
+    }
+    #research{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: -15%;  
+    }
+    #researchCourse{
+        position: relative;
+        right: 30%;
+       bottom: 60px;  
     }
     #serviceHead {
-        margin-top: 7%;
+        font-size: 12px;
     }
+
     #image {
-        margin-top: 17px;
-        margin-right: -40px;
+        width: 200%;
+        height: 58px;
     }
+
     #contact {
-        margin-left: 20%;
+        font-size: 10px;
     }
 }
 
 /* For screens with a minimum width of 1280px */
-@media only screen and (min-width: 1280px) {
+@media only screen and (min-width: 1025px)and (max-width:1300px){
     #container {
-        margin-left: 15%;
+        margin-left: 5%;
     }
+    
     #navbar {
-        width: 100%;
+        height: 50px;
+        font-size: 10px;
     }
+
     #navigate {
-        margin-left: 27%;
+        margin-left: 8%;
         width: 50%;
     }
+    #navigate a {
+        color: white; /* Change link color to white */
+        text-decoration: none; 
+        font-size: 10px;
+        margin-top: 4%;
+        margin-left:-4.5%;
+    }
+
     #landingpage {
         margin-top: 13%;
     }
+
     #logo {
-        margin-left: -4%;
+        width: 110px;
+        height: 50px;
     }
+
     #resume {
-        width: 90px;
+        width: 58px;
+        height: 40px;
+        font-size: 12px;
     }
+
     #Maureen {
-        height: 350px;
+        height: 210px;
+        border: 4px solid #1ae90b;
+        padding: 7px;
+        margin-top: 2%;
     }
+
     #aboutHead {
-        margin-top: 7%;
+        font-size: 12px;
     }
+
     #about {
-        margin-left: 2%;
-        width: 75%;
+        width: 80%;    
+        font-size: 14.5px;
+        border-radius: 10px;
     }
+
     #intro {
-        margin-top: -2%;
+        font-size: 12px;
     }
-    #skills {
-        margin-left: 4%;
+
+    #Row1, #Row2, #Row3 {
+        gap: 15%;
+        flex-wrap: wrap;
+        font-size: 9px;
     }
-    #Row1 {
-        gap: 6.5%;
-    }
+
     #Product {
-        margin-left: 6px;
-        margin-top: 10px;
-        margin-right: -40px;
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
     }
     #pmCourse {
-        margin-left: 29px;
+        position: relative;
+        right: 22%;
     }
-    #Row2 {
-        gap: 6%;
+
+    #design{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: -10%;  
     }
-    #Row3 {
-        gap: 6%;
+    #designCourse{
+        position: relative;
+        right: 20%;
+       bottom: 45px;  
+    }
+    #mobile{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: 4%;  
+    }
+    #mobileCourse{
+        position: relative;
+        right: -20%;
+       bottom: 65px;
+    }
+    #backend{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: -7%;  
+    }
+    #backendCourse{
+        position: relative;
+        right: -20%;
+       bottom: 80px;  
+    }
+    #research{
+        width: 35%;
+        height: 70px;
+        margin-left: -2px;
+        margin-top: -15%;  
+    }
+    #researchCourse{
+        position: relative;
+        right: 30%;
+       bottom: 60px;  
     }
     #serviceHead {
-        margin-top: 7%;
+        font-size: 12px;
     }
+
     #image {
-        margin-top: 17px;
-        margin-right: -40px;
+        width: 200%;
+        height: 58px;
     }
+
     #contact {
-        margin-left: 20%;
+        font-size: 10px;
     }
 }

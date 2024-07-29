@@ -1,6 +1,10 @@
-document.querySelectorAll('#navigate p').forEach(link => {
-    link.addEventListener('click', function() {
-        document.querySelectorAll('#navigate p').forEach(p => p.classList.remove('active'));
+document.querySelectorAll('#navigate a').forEach(link => {
+    link.addEventListener('click', function(e) {
+        e.preventDefault();
+        document.querySelectorAll('#navigate a').forEach(a => a.classList.remove('active'));
         this.classList.add('active');
+        const targetId = this.getAttribute('href');
+        const targetElement = document.querySelector(targetId);
+        targetElement.scrollIntoView({ behavior: 'smooth' });
     });
 });
