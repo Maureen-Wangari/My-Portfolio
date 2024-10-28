@@ -1,561 +1,222 @@
 body {
-    background-color: black;
-    color: white;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #000;
+    color: #fff;
 }
 
-#container {
-    margin-left: 15%;
+html {
+    scroll-behavior: smooth;
+}  
+
+h1, h2, h3 {
+    font-family: 'Italiana', cursive;
 }
 
-#navbar {
+
+header {
+    padding: 20px;
     display: flex;
-    position: fixed;
-    top: 0;
-    background-color: black;
-    height: 90px;
-    width: 100%;         
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-    z-index: 999;
+    justify-content: space-between;
+    align-items: center;
 }
 
-#navigate {
+.cv-container {
+    position: relative;
     display: flex;
-    gap: 14%;
-    font-size: 18px;
-    margin-top: 1%;
-    margin-left: 10%;
-    width: 40%;
-    text-wrap: nowrap;
+    justify-content: center;
+    margin: 50px 0; 
 }
 
-#navigate a {
-    color: white; /* Change link color to white */
-    text-decoration: none; 
-    font-size: 30px;
-    margin-left: -3%;
+.cv-image {
+    width: 300px;
+    transition: transform 0.3s ease;
+    cursor: pointer;
 }
 
-#navigate a.active {
-    color: #1ae90b; 
+.cv-image:hover {
+    transform: scale(1.05);
+}
+
+.logo {
+    font-size: 24px;
     font-weight: bold;
 }
 
-#navigate a:hover {
-    text-decoration: underline; 
+nav a {
+    color: #fff;
+    text-decoration: none;
+    margin-left: 20px;
 }
 
-#landingpage {
-    margin-top: 13%;
+.cta-button {
+    background-color: transparent;
+    border: 1px solid #fff;
+    color: #fff;
+    padding: 10px 20px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+main {
+    padding: 50px;
+    max-width: 1200px; 
+    margin: 0 auto;
+}
+
+#home {
     display: flex;
     gap: 10%;
+    margin-top: -5%;
+    margin-bottom: 3%;
+    align-items: center;
 }
 
-#logo {
-    margin-left: -4%;
-    height: 100%;
+.content {
+    flex: 1;
+    font-size: 40px;
+    margin-top: 12%;
+    max-width: 1100px;
 }
 
-#resume-button {
-    list-style: none;
-    width: 90px;
-    border-radius: 15%;
-    background-color: #1ae90b;
-    border-color: #1ae90b;
-    color: white;
-    height: 70px;
+h1 {
+    font-size: 54px;
+    margin: 0;
 }
 
-#Maureen {
-    height: 350px;
-    border-radius: 17%;
-    border: 10px solid #1ae90b;
-    padding: 29px;
-    box-sizing: border-box;
+h2 {
+    font-size: 64px;
+    margin: 3;
+    color: #4CAF50;
+}
+
+p {
+    font-size: 18px;
+    max-width: 1200px;
+    line-height: 1.6;
+}
+
+.image-container {
+    flex: 1;
+    height: 250px;
+    margin-top: -5%;
+    width: 60%;
     position: relative;
 }
 
-#aboutHead {
-    margin-top: 7%;
-    font-size: 25px;
-    color: #1ae90b;
+.profile-image {
+    width: 400px; /* Reduce the size of the image */
+    height: 400px; /* Make the height equal to the width for a circle */
+    object-fit: cover;
+    border-radius: 50%; /* This makes the image circular */
+    transition: transform 0.3s ease;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    display: block;
 }
 
-#about {
+
+/* .highlight {
+    position: absolute;
+    top: 50px;
+    left: 50px;
+    width: 100px;
+    height: 100px;
+    background-color: #4CAF50;
+    mix-blend-mode: screen;
+    pointer-events: none;
+    transition: all 0.3s ease;
+} */
+
+#role-output {
+    min-height: 2em;
     font-size: 30px;
-    margin-left: 2%;
-    border-radius: 25px;
-    border: solid 5px #1ae90b;
-    padding-left: 5%;
-    padding-right: 6%;
-    width: 75%;
-    text-align: left;
+    color: rgb(255, 102, 0);
+    font-weight: bold;
 }
 
-#intro {
-    font-size: 35px;
-    margin-top: -2%;
+/* New styles for About, Skills, and Services sections */
+#about{
+    margin-top: 18%;
+}
+#skills, #services {
+    margin-top: 5%; 
 }
 
-#skills {
-    margin-left: 4%;
-    gap: 2px;
+h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
 }
 
-#Row1, #Row2, #Row3 {
-    display: flex;
-    gap: 6%;
+.skills-grid, .services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 20px;
+    font-size: 18px;
+    height: 500px;
 }
 
-#Product {
-    margin-left: 6px;
-    height: 90px;
-    margin-top: 10px;
-    margin-right: -40px;
+.skill-category, .service-item {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 5px;
 }
 
-#pmCourse {
-    margin-left: 29px;  
+.skill-category h3, .service-item h3 {
+    color: #ff5e00;
+    margin-top: 0;
+    font-size: 30px;
 }
 
-#mobile {
-    margin-left: 6px;
-    height: 90px;
+.skill-category ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-#design {
-    margin-left: 6px;
-    height: 90px;
+.service-item {
+    text-align: center;
 }
 
-#designCourse {
-    margin-left: -30px; 
+.service-item i {
+    font-size: 40px;
+    color: #4CAF50;
+    margin-bottom: 10px;
 }
 
-#serviceHead {
-    margin-top: 7%;
-    font-size: 25px;
-    color: #1ae90b;  
-}
-#contacthead{
-    margin-top: 7%;
-    font-size: 25px;
-    margin-left: -26.5%;
-    color: #1ae90b;   
+#projects {
+    margin-top: 50px;
 }
 
-#image {
-    height: 90px;
-    margin-top: 17px;
-    margin-right: -40px;
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+    font-size: 18px;
 }
 
-#contact {
-    margin-left: 20%; 
+.project-item {
+    background-color: #111;
+    padding: 20px;
+    border-radius: 5px;
+    text-align: center;
 }
-#contact a {
-    color: white; 
+
+.project-item img {
+    width: 100%;
+    height: 230px;
+    border-radius: 20px;
+    margin-bottom: 10px;
+}
+
+.project-item h3 {
+    color: #ff5e00;
+    font-size: 24px;
+}
+
+.project-item a {
+    color: #4CAF50;
     text-decoration: none;
 }
 
-#contact a:hover {
-    text-decoration: underline; 
-}
-
-/* For screens with a maximum width of 768px */
-@media only screen and (max-width: 768px) {
-    #container {
-        margin-left: 5%;
-    }
-    
-    #navbar {
-        height: 50px;
-        font-size: 10px;
-    }
-
-    #navigate {
-        margin-left: 8%;
-        width: 50%;
-    }
-    #navigate a {
-        color: white; /* Change link color to white */
-        text-decoration: none; 
-        font-size: 10px;
-        margin-top: 4%;
-        margin-left:-4.5%;
-    }
-
-    #landingpage {
-        margin-top: 13%;
-    }
-
-    #logo {
-        width: 110px;
-        height: 50px;
-    }
-
-    #resume {
-        width: 58px;
-        height: 40px;
-        font-size: 12px;
-    }
-
-    #Maureen {
-        height: 110px;
-        border: 4px solid #1ae90b;
-        padding: 7px;
-        margin-top: 2%;
-    }
-
-    #aboutHead {
-        font-size: 12px;
-    }
-
-    #about {
-        width: 80%;    
-        font-size: 14.5px;
-        border-radius: 10px;
-    }
-
-    #intro {
-        font-size: 12px;
-    }
-
-    #Row1, #Row2, #Row3 {
-        gap: 15%;
-        flex-wrap: wrap;
-        font-size: 9px;
-    }
-
-    #Product {
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-    }
-    #pmCourse {
-        position: relative;
-        right: 22%;
-    }
-
-    #design{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: -10%;  
-    }
-    #designCourse{
-        position: relative;
-        right: 20%;
-       bottom: 45px;  
-    }
-    #mobile{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: 4%;  
-    }
-    #mobileCourse{
-        position: relative;
-        right: -20%;
-       bottom: 65px;
-    }
-    #backend{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: -7%;  
-    }
-    #backendCourse{
-        position: relative;
-        right: -20%;
-       bottom: 80px;  
-    }
-    #research{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: -15%;  
-    }
-    #researchCourse{
-        position: relative;
-        right: 30%;
-       bottom: 60px;  
-    }
-    #serviceHead {
-        font-size: 12px;
-    }
-
-    #image {
-        width: 200%;
-        height: 58px;
-    }
-
-    #contact {
-        font-size: 10px;
-    }
-}
-
-/* For screens with a minimum width of 1024px */
-@media only screen and (min-width: 768px) and (max-width: 1024) {
-    #container {
-        margin-left: 5%;
-    }
-    
-    #navbar {
-        height: 50px;
-        font-size: 10px;
-    }
-
-    #navigate {
-        margin-left: 8%;
-        width: 50%;
-    }
-    #navigate a {
-        color: white; /* Change link color to white */
-        text-decoration: none; 
-        font-size: 10px;
-        margin-top: 4%;
-        margin-left:-4.5%;
-    }
-
-    #landingpage {
-        margin-top: 13%;
-    }
-
-    #logo {
-        width: 110px;
-        height: 50px;
-    }
-
-    #resume {
-        width: 58px;
-        height: 40px;
-        font-size: 12px;
-    }
-
-    #Maureen {
-        height: 110px;
-        border: 4px solid #1ae90b;
-        padding: 7px;
-        margin-top: 2%;
-    }
-
-    #aboutHead {
-        font-size: 12px;
-    }
-
-    #about {
-        width: 80%;    
-        font-size: 14.5px;
-        border-radius: 10px;
-    }
-
-    #intro {
-        font-size: 12px;
-    }
-
-    #Row1, #Row2, #Row3 {
-        gap: 15%;
-        flex-wrap: wrap;
-        font-size: 9px;
-    }
-
-    #Product {
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-    }
-    #pmCourse {
-        position: relative;
-        right: 22%;
-    }
-
-    #design{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: -10%;  
-    }
-    #designCourse{
-        position: relative;
-        right: 20%;
-       bottom: 45px;  
-    }
-    #mobile{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: 4%;  
-    }
-    #mobileCourse{
-        position: relative;
-        right: -20%;
-       bottom: 65px;
-    }
-    #backend{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: -7%;  
-    }
-    #backendCourse{
-        position: relative;
-        right: -20%;
-       bottom: 80px;  
-    }
-    #research{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: -15%;  
-    }
-    #researchCourse{
-        position: relative;
-        right: 30%;
-       bottom: 60px;  
-    }
-    #serviceHead {
-        font-size: 12px;
-    }
-
-    #image {
-        width: 200%;
-        height: 58px;
-    }
-
-    #contact {
-        font-size: 10px;
-    }
-}
-
-/* For screens with a minimum width of 1280px */
-@media only screen and (min-width: 1025px)and (max-width:1300px){
-    #container {
-        margin-left: 5%;
-    }
-    
-    #navbar {
-        height: 50px;
-        font-size: 10px;
-    }
-
-    #navigate {
-        margin-left: 8%;
-        width: 50%;
-    }
-    #navigate a {
-        color: white; /* Change link color to white */
-        text-decoration: none; 
-        font-size: 10px;
-        margin-top: 4%;
-        margin-left:-4.5%;
-    }
-
-    #landingpage {
-        margin-top: 13%;
-    }
-
-    #logo {
-        width: 110px;
-        height: 50px;
-    }
-
-    #resume {
-        width: 58px;
-        height: 40px;
-        font-size: 12px;
-    }
-
-    #Maureen {
-        height: 210px;
-        border: 4px solid #1ae90b;
-        padding: 7px;
-        margin-top: 2%;
-    }
-
-    #aboutHead {
-        font-size: 12px;
-    }
-
-    #about {
-        width: 80%;    
-        font-size: 14.5px;
-        border-radius: 10px;
-    }
-
-    #intro {
-        font-size: 12px;
-    }
-
-    #Row1, #Row2, #Row3 {
-        gap: 15%;
-        flex-wrap: wrap;
-        font-size: 9px;
-    }
-
-    #Product {
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-    }
-    #pmCourse {
-        position: relative;
-        right: 22%;
-    }
-
-    #design{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: -10%;  
-    }
-    #designCourse{
-        position: relative;
-        right: 20%;
-       bottom: 45px;  
-    }
-    #mobile{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: 4%;  
-    }
-    #mobileCourse{
-        position: relative;
-        right: -20%;
-       bottom: 65px;
-    }
-    #backend{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: -7%;  
-    }
-    #backendCourse{
-        position: relative;
-        right: -20%;
-       bottom: 80px;  
-    }
-    #research{
-        width: 35%;
-        height: 70px;
-        margin-left: -2px;
-        margin-top: -15%;  
-    }
-    #researchCourse{
-        position: relative;
-        right: 30%;
-       bottom: 60px;  
-    }
-    #serviceHead {
-        font-size: 12px;
-    }
-
-    #image {
-        width: 200%;
-        height: 58px;
-    }
-
-    #contact {
-        font-size: 10px;
-    }
-}
