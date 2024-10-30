@@ -13,8 +13,25 @@ document.querySelectorAll('nav a').forEach(anchor => {
     });
   });
 
+  // Get the hamburger menu and navbar elements
+const hamburger = document.getElementById('hamburger');
+const navbar = document.getElementById('navbar');
 
-  
+// Add an event listener to the hamburger icon
+hamburger.addEventListener('click', () => {
+    // Toggle the active class on the navbar
+    navbar.classList.toggle('active');
+});
+
+// Optionally close the menu when a link is clicked (for better user experience)
+const navLinks = document.querySelectorAll('nav a');
+
+navLinks.forEach(link => {
+    link.addEventListener('click', () => {
+        navbar.classList.remove('active');
+    });
+});
+
   const roles = [
       "Software Developer",
       "UI/UX Designer",

@@ -1,3 +1,4 @@
+/* Base Styles */
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -8,25 +9,25 @@ body {
 
 html {
     scroll-behavior: smooth;
-}  
+}
 
 h1, h2, h3 {
     font-family: 'Italiana', cursive;
 }
-
 
 header {
     padding: 20px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
 }
 
 .cv-container {
     position: relative;
     display: flex;
     justify-content: center;
-    margin: 50px 0; 
+    margin: 50px 0;
 }
 
 .cv-image {
@@ -61,7 +62,7 @@ nav a {
 
 main {
     padding: 50px;
-    max-width: 1200px; 
+    max-width: 1200px;
     margin: 0 auto;
 }
 
@@ -75,24 +76,25 @@ main {
 
 .content {
     flex: 1;
-    font-size: 40px;
+    font-size: 40px; /* Base font size */
     margin-top: 12%;
     max-width: 1100px;
+    text-align: center;
 }
 
 h1 {
-    font-size: 54px;
+    font-size: 54px; /* Base heading size */
     margin: 0;
 }
 
 h2 {
-    font-size: 64px;
+    font-size: 36px; /* Base subheading size */
     margin: 3;
     color: #4CAF50;
 }
 
 p {
-    font-size: 18px;
+    font-size: 18px; /* Base paragraph size */
     max-width: 1200px;
     line-height: 1.6;
 }
@@ -106,29 +108,14 @@ p {
 }
 
 .profile-image {
-    width: 400px; /* Reduce the size of the image */
-    height: 400px; /* Make the height equal to the width for a circle */
+    width: 400px;
+    height: 400px;
     object-fit: cover;
-    border-radius: 50%; /* This makes the image circular */
+    border-radius: 50%;
     transition: transform 0.3s ease;
-    margin-left: auto;
-    margin-right: auto;
-    margin-top: 5%;
+    margin: 5% auto;
     display: block;
 }
-
-
-/* .highlight {
-    position: absolute;
-    top: 50px;
-    left: 50px;
-    width: 100px;
-    height: 100px;
-    background-color: #4CAF50;
-    mix-blend-mode: screen;
-    pointer-events: none;
-    transition: all 0.3s ease;
-} */
 
 #role-output {
     min-height: 2em;
@@ -137,12 +124,12 @@ p {
     font-weight: bold;
 }
 
-/* New styles for About, Skills, and Services sections */
-#about{
+#about {
     margin-top: 18%;
 }
+
 #skills, #services {
-    margin-top: 5%; 
+    margin-top: 5%;
 }
 
 h2 {
@@ -155,7 +142,7 @@ h2 {
     grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
     gap: 20px;
     font-size: 18px;
-    height: 500px;
+    height: auto;
 }
 
 .skill-category, .service-item {
@@ -167,7 +154,7 @@ h2 {
 .skill-category h3, .service-item h3 {
     color: #ff5e00;
     margin-top: 0;
-    font-size: 30px;
+    font-size: 24px; /* Adjusted for better readability */
 }
 
 .skill-category ul {
@@ -218,5 +205,198 @@ h2 {
 .project-item a {
     color: #4CAF50;
     text-decoration: none;
+}
+
+/* Media Queries */
+
+/* Small Screens (up to 480px) */
+@media (max-width: 480px) {
+    header {
+        flex-direction: column; /* Stack header elements */
+        align-items: flex-start; /* Align left */
+    }
+
+    nav a {
+        margin-left: 10px; /* Reduce margin */
+    }
+
+    .content {
+        font-size: 24px; /* Smaller font size */
+    }
+
+    h1 {
+        font-size: 30px; /* Smaller heading */
+    }
+
+    h2 {
+        font-size: 24px; /* Smaller subheading */
+    }
+
+    p {
+        font-size: 16px; /* Smaller paragraph */
+    }
+
+    #home {
+        flex-direction: column; /* Stack items */
+        gap: 20px;
+    }
+
+    .profile-image {
+        width: 200px; /* Reduce image size */
+        height: 200px;
+    }
+
+    .skills-grid, .services-grid {
+        grid-template-columns: 1fr; /* Single column layout */
+    }
+
+    .project-item img {
+        height: auto; /* Adjust image height */
+    }
+}
+
+/* Medium Screens (481px to 768px) */
+@media (min-width: 481px) and (max-width: 768px) {
+    .content {
+        font-size: 28px; /* Adjust font size */
+    }
+
+    h1 {
+        font-size: 36px; /* Adjust heading size */
+    }
+
+    h2 {
+        font-size: 28px; /* Adjust subheading size */
+    }
+
+    p {
+        font-size: 17px; /* Slightly smaller paragraph */
+    }
+
+    #home {
+        flex-direction: column; /* Stack items */
+        gap: 15px; /* Reduce gap */
+    }
+
+    .profile-image {
+        width: 250px; /* Adjust image size */
+        height: 250px;
+    }
+
+    .skills-grid, .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* 2 columns */
+    }
+}
+
+/* Large Screens (769px and above) */
+@media (min-width: 769px) {
+    .content {
+        font-size: 40px; /* Default size */
+    }
+
+    h1 {
+        font-size: 54px; /* Default heading size */
+    }
+
+    h2 {
+        font-size: 36px; /* Default subheading size */
+    }
+
+    p {
+        font-size: 18px; /* Default paragraph size */
+    }
+
+    #home {
+        flex-direction: row; /* Default layout */
+        gap: 10%; /* Default gap */
+    }
+
+    .profile-image {
+        width: 400px; /* Default image size */
+        height: 400px;
+    }
+
+    .skills-grid, .services-grid {
+        grid-template-columns: repeat(auto-fit, minmax(350px, 1fr)); /* Default columns */
+    }
+}
+/* General Styles */
+body {
+    font-family: 'Italiana', serif;
+    margin: 0;
+    padding: 0;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #333;
+    padding: 15px;
+}
+
+.logo {
+    color: #fff;
+    font-size: 24px;
+}
+
+nav {
+    display: flex;
+    gap: 15px;
+}
+
+nav a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.cta-button {
+    background-color: #ff5733;
+    color: #fff;
+    padding: 10px 15px;
+    text-decoration: none;
+}
+
+.hamburger {
+    display: none;
+    font-size: 28px;
+    cursor: pointer;
+}
+
+.back-arrow {
+    margin-left: auto;
+}
+
+.back-button {
+    color: #fff;
+    text-decoration: none;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+}
+
+.back-button i {
+    margin-right: 5px;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    nav {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: #000;
+        width: 100%;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: block;
+    }
 }
 
